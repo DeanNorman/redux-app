@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 class App extends Component {
   render() {
@@ -8,23 +10,11 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Redux / React App  🐕 💨</h2>
+          <h2>Redux / React App  <span role="img" aria-label="dog">🐕 💨</span></h2>
         </div>
         <div className="Todo-App">
-          <form>
-            <input type="text" />
-          </form>
-          <div className="Todo-List">
-            <ul>
-              {this.props.todos.map(todos => (
-                <li>
-                  <input type="checkbox" defaultChecked={todos.isComplete} /> {todos.name}
-              </li>
-              ))}
-
-
-            </ul>
-          </div>
+          <TodoForm />
+          <TodoList todos={this.props.todos} />
         </div>
       </div>
     );

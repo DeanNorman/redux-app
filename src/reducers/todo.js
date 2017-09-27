@@ -3,7 +3,8 @@ const initState = {
         { id: 1, name: 'create store', isComplete: true },
         { id: 2, name: 'load state', isComplete: true },
         { id: 3, name: 'handle state', isComplete: false },
-    ]
+    ],
+    currentTodo: 'temp',
 }
 
 export default (state = initState, action) => {

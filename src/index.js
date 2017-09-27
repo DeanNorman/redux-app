@@ -5,6 +5,16 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store'
 
-const state = store.getState()
-ReactDOM.render(<App {...state} />, document.getElementById('root'));
+const render = () => {
+    const state = store.getState()
+    ReactDOM.render(<App
+        todos={state.todos}
+        currentTodo={state.currentTodo}
+         />, document.getElementById('root'));
+}
+render()
+
+store.subscribe(render)
+
+
 registerServiceWorker();

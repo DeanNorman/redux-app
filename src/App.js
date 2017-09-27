@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Redux / React App  <span role="img" aria-label="dog">🐕 💨</span></h2>
+          <h2>Todo App with redux  <span role="img" aria-label="dog">🐕 💨</span></h2>
         </div>
         <div className="Todo-App">
           <TodoForm />

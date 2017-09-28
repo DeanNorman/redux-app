@@ -13,7 +13,10 @@ class App extends Component {
           <h2>Todo App with redux  <span role="img" aria-label="dog">🐕 💨</span></h2>
         </div>
         <div className="Todo-App">
-          <TodoForm currentTodo={this.props.currentTodo} />
+          <TodoForm
+          currentTodo={this.props.currentTodo}
+          changeCurrent={this.props.changeCurrent}
+          />
           <TodoList todos={this.props.todos} />
         </div>
       </div>

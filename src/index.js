@@ -5,10 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store'
 
-const todoChangeHandler = (val) => store.dispatch({ 
-    type: 'CURRENT_UPDATE', 
-    payload: val
-});
+const todoChangeHandler = (val) => store.dispatch();
 
 const render = () => {
     const state = store.getState()
